@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZERO Markets IG BOOST 复盘数据报告</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        base: '#0B1118',
+        card: '#151E26',
+        brand: '#00B955',
+        danger: '#EF4444',
+        warn: '#F59E0B',
+        muted: '#9CA3AF',
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background-color:#0B1118; }
+  .card-hover { transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+  .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -12px rgba(0,0,0,.6); border-color: rgba(0,185,85,.4); }
+  .bar-grow { animation: grow 1.2s cubic-bezier(.22,1,.36,1) forwards; transform-origin: left; }
+  @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  .glow { box-shadow: 0 0 0 1px rgba(0,185,85,.15), 0 0 40px -10px rgba(0,185,85,.25); }
+  .grad-brand { background-image: linear-gradient(135deg, rgba(0,185,85,.14), rgba(0,185,85,0) 60%); }
+  .num-tabular { font-variant-numeric: tabular-nums; }
+  ::selection { background: rgba(0,185,85,.35); }
+</style>
+</head>
+<body class="bg-base text-white font-sans antialiased selection:bg-brand/30">
+
+<div class="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+  <!-- ================= HEADER ================= -->
+  <header class="mb-14">
+    <div class="flex items-center gap-3 mb-6">
+      <div class="h-9 w-9 rounded-xl bg-brand/15 flex items-center justify-center glow">
+        <span class="h-3 w-3 rounded-full bg-brand block"></span>
+      </div>
+      <span class="text-sm tracking-[0.2em] text-muted font-medium uppercase">ZERO Markets</span>
+    </div>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight leading-tight">
+      IG <span class="text-brand">BOOST</span> 复盘数据报告
+    </h1>
+    <p class="mt-4 text-muted text-base sm:text-lg max-w-2xl leading-relaxed">
+      Instagram 加速投放效果复盘 · 内容框架与成本效率深度拆解
+    </p>
+    <div class="mt-6 inline-flex items-center gap-2 rounded-full bg-card border border-white/5 px-4 py-2 text-sm text-muted num-tabular">
+      <svg class="w-4 h-4 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+      投放区间 &nbsp;2026.07.17 &nbsp;—&nbsp; 07.30
+    </div>
+  </header>
+
+  <!-- ================= KPI ================= -->
+  <section class="mb-16">
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+      <!-- 1 -->
+      <div class="card-hover grad-brand bg-card rounded-2xl border border-white/5 p-5">
+        <p class="text-xs text-muted mb-3">总投放量</p>
+        <p class="text-3xl font-bold num-tabular">7<span class="text-base font-medium text-muted ml-1">次</span></p>
+        <p class="text-xs text-muted mt-2">5 Reel · 2 Post</p>
+      </div>
+      <!-- 2 -->
+      <div class="card-hover bg-card rounded-2xl border border-white/5 p-5">
+        <p class="text-xs text-muted mb-3">总花费金额</p>
+        <p class="text-3xl font-bold num-tabular">$631<span class="text-base font-medium text-muted">.53</span></p>
+        <p class="text-xs text-muted mt-2">USD</p>
+      </div>
+      <!-- 3 -->
+      <div class="card-hover bg-card rounded-2xl border border-white/5 p-5">
+        <p class="text-xs text-muted mb-3">总涨粉数量</p>
+        <p class="text-3xl font-bold num-tabular text-brand">2,732<span class="text-base font-medium text-muted ml-1">人</span></p>
+        <p class="text-xs text-muted mt-2">Net Followers</p>
+      </div>
+      <!-- 4 -->
+      <div class="card-hover bg-card rounded-2xl border border-white/5 p-5">
+        <p class="text-xs text-muted mb-3">总 Impressions</p>
+        <p class="text-3xl font-bold num-tabular">2.89<span class="text-base font-medium text-muted ml-1">M</span></p>
+        <p class="text-xs text-muted mt-2">2,892,473 次曝光</p>
+      </div>
+      <!-- 5 -->
+      <div class="card-hover grad-brand bg-card rounded-2xl border border-white/5 p-5">
+        <p class="text-xs text-muted mb-3">平均涨粉成本</p>
+        <p class="text-3xl font-bold num-tabular text-brand">$0.231</p>
+        <p class="text-xs text-muted mt-2">/ 粉丝</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 纵向分析 Reel vs Post ================= -->
+  <section class="mb-16">
+    <div class="flex items-center gap-3 mb-2">
+      <span class="text-brand text-sm font-semibold tracking-widest">01 / 纵向分析</span>
+    </div>
+    <h2 class="text-2xl sm:text-3xl font-bold mb-8">Reel 视频 &nbsp;vs&nbsp; Post 图文 · 效果差异</h2>
+
+    <!-- 对比双卡 -->
+    <div class="grid md:grid-cols-2 gap-5 mb-10">
+      <!-- Reel -->
+      <div class="card-hover bg-card rounded-2xl border border-brand/20 p-6 glow">
+        <div class="flex items-center justify-between mb-5">
+          <h3 class="text-lg font-semibold flex items-center gap-2">
+            <span class="h-2.5 w-2.5 rounded-full bg-brand"></span> Reel 短视频
+          </h3>
+          <span class="text-xs text-muted">5 次投放</span>
+        </div>
+        <dl class="space-y-3 num-tabular">
+          <div class="flex justify-between text-sm"><dt class="text-muted">总花费</dt><dd class="font-semibold">$539.88</dd></div>
+          <div class="flex justify-between text-sm"><dt class="text-muted">总曝光</dt><dd class="font-semibold">2,599,148</dd></div>
+          <div class="flex justify-between text-sm"><dt class="text-muted">总涨粉</dt><dd class="font-semibold text-brand">2,728 人</dd></div>
+          <div class="flex justify-between text-sm border-t border-white/5 pt-3"><dt class="text-muted">平均涨粉成本</dt><dd class="font-bold text-brand text-lg">$0.198</dd></div>
+        </dl>
+      </div>
+      <!-- Post -->
+      <div class="card-hover bg-card rounded-2xl border border-danger/20 p-6">
+        <div class="flex items-center justify-between mb-5">
+          <h3 class="text-lg font-semibold flex items-center gap-2">
+            <span class="h-2.5 w-2.5 rounded-full bg-danger"></span> Post 图文
+          </h3>
+          <span class="text-xs text-muted">2 次投放</span>
+        </div>
+        <dl class="space-y-3 num-tabular">
+          <div class="flex justify-between text-sm"><dt class="text-muted">总花费</dt><dd class="font-semibold">$91.65</dd></div>
+          <div class="flex justify-between text-sm"><dt class="text-muted">总曝光</dt><dd class="font-semibold">293,325</dd></div>
+          <div class="flex justify-between text-sm"><dt class="text-muted">总涨粉</dt><dd class="font-semibold text-danger">4 人</dd></div>
+          <div class="flex justify-between text-sm border-t border-white/5 pt-3"><dt class="text-muted">平均涨粉成本</dt><dd class="font-bold text-danger text-lg">$22.91</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <!-- 涨粉成本对比条 -->
+    <div class="bg-card rounded-2xl border border-white/5 p-6 mb-6">
+      <p class="text-sm text-muted mb-6">平均涨粉成本对比 &nbsp;<span class="text-white/40">（越短越优 · 对数直观示意）</span></p>
+      <!-- Reel bar -->
+      <div class="mb-6">
+        <div class="flex justify-between text-sm mb-2"><span class="text-white/80">Reel</span><span class="num-tabular font-semibold text-brand">$0.198</span></div>
+        <div class="h-3 w-full rounded-full bg-white/5 overflow-hidden">
+          <div class="bar-grow h-full rounded-full bg-brand" style="width:3%"></div>
+        </div>
+      </div>
+      <!-- Post bar -->
+      <div>
+        <div class="flex justify-between text-sm mb-2"><span class="text-white/80">Post</span><span class="num-tabular font-semibold text-danger">$22.91</span></div>
+        <div class="h-3 w-full rounded-full bg-white/5 overflow-hidden">
+          <div class="bar-grow h-full rounded-full bg-danger" style="width:100%"></div>
+        </div>
+      </div>
+      <p class="mt-6 text-sm text-muted">
+        涨粉成本相差约 <span class="text-danger font-bold num-tabular">116×</span>，Reel 承担了全场
+        <span class="text-brand font-bold num-tabular">99.85%</span> 的粉丝增长。
+      </p>
+    </div>
+
+    <!-- 涨粉占比条 -->
+    <div class="bg-card rounded-2xl border border-white/5 p-6 mb-8">
+      <p class="text-sm text-muted mb-4">涨粉贡献占比</p>
+      <div class="h-8 w-full rounded-lg overflow-hidden flex text-xs font-semibold">
+        <div class="bar-grow bg-brand flex items-center justify-center" style="width:99.85%">Reel · 2,728 人 (99.85%)</div>
+        <div class="bg-danger flex items-center justify-center" style="width:0.15%">&nbsp;</div>
+      </div>
+      <p class="text-xs text-muted mt-2">Post 仅贡献 4 人 (0.15%)</p>
+    </div>
+
+    <!-- 解读 -->
+    <div class="space-y-4">
+      <div class="bg-card rounded-2xl border border-white/5 p-6 card-hover">
+        <h4 class="font-semibold mb-2 flex items-center gap-2 text-brand">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+          效果天壤之别
+        </h4>
+        <p class="text-muted text-sm leading-relaxed">
+          Reel 承担了 <span class="text-white font-medium">99.85%</span> 的粉丝增长，平均涨粉成本控制在
+          <span class="text-brand font-medium">$0.198</span> 的黄金区间；而 Post 涨粉成本高达
+          <span class="text-danger font-medium">$22.91</span>，几乎完全失去转化能力。
+        </p>
+      </div>
+      <div class="bg-card rounded-2xl border border-white/5 p-6 card-hover">
+        <h4 class="font-semibold mb-2 flex items-center gap-2 text-warn">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          内容框架层面分析
+        </h4>
+        <p class="text-muted text-sm leading-relaxed">
+          Post（如 Nvidia、S&amp;P 500 回购）定位为「新闻宏观资讯」，对普通受众而言离生活太远，看完了顶多发出一声感叹，无法产生「我必须关注你来提升交易技术」的强动机；而 Reel 直接切中
+          <span class="text-white font-medium">交易择时、图表陷阱、兼职收益、快钱心理</span>
+          等交易者的核心真痛点，关注承诺明确且具体。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 横向分析 单品表现 ================= -->
+  <section class="mb-16">
+    <div class="flex items-center gap-3 mb-2">
+      <span class="text-brand text-sm font-semibold tracking-widest">02 / 横向分析</span>
+    </div>
+    <h2 class="text-2xl sm:text-3xl font-bold mb-8">单品表现对比 &amp; 复投效应</h2>
+
+    <!-- 排行条形 -->
+    <div class="bg-card rounded-2xl border border-white/5 p-6 mb-8">
+      <div class="flex items-center justify-between mb-6">
+        <p class="text-sm text-muted">素材涨粉成本排行 <span class="text-white/40">（条越长成本越高）</span></p>
+        <div class="hidden sm:flex items-center gap-4 text-xs text-muted">
+          <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-brand"></span>优质</span>
+          <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-warn"></span>偏高</span>
+          <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-danger"></span>失效</span>
+        </div>
+      </div>
+
+      <!-- 每条 max ref = $30.40 -->
+      <div class="space-y-5 num-tabular">
+
+        <!-- Quick Profits 首轮 -->
+        <div>
+          <div class="flex justify-between items-baseline text-sm mb-1.5">
+            <span class="text-white/90 flex items-center gap-2">Reel · Quick Profits <span class="text-[10px] px-1.5 py-0.5 rounded bg-brand/15 text-brand">首轮 · 全场最佳</span></span>
+            <span class="font-semibold text-brand">$0.127</span>
+          </div>
+          <div class="h-2.5 rounded-full bg-white/5 overflow-hidden"><div class="bar-grow h-full rounded-full bg-brand" style="width:1%"></div></div>
+          <p class="text-xs text-muted mt-1">花费 $248.91 · 曝光 1,094,295 · 涨粉 1,960 人</p>
+        </div>
+
+        <!-- Extra Income -->
+        <div>
+          <div class="flex justify-between items-baseline text-sm mb-1.5">
+            <span class="text-white/90">Reel · Extra Income</span>
+            <span class="font-semibold text-brand">$0.318</span>
+          </div>
+          <div class="h-2.5 rounded-full bg-white/5 overflow-hidden"><div class="bar-grow h-full rounded-full bg-brand" style="width:2.5%"></div></div>
+          <p class="text-xs text-muted mt-1">花费 $82.37 · 曝光 361,232 · 涨粉 259 人</p>
+        </div>
+
+        <!-- Timing -->
+        <div>
+          <div class="flex justify-between items-baseline text-sm mb-1.5">
+            <span class="text-white/90">Reel · Timing Changes everything</span>
+            <span class="font-semibold text-brand">$0.334</span>
+          </div>
+          <div class="h-2.5 rounded-full bg-white/5 overflow-hidden"><div class="bar-grow h-full rounded-full bg-brand" style="width:2.6%"></div></div>
+          <p class="text-xs text-muted mt-1">花费 $81.45 · 曝光 473,947 · 涨粉 244 人</p>
+        </div>
+
+        <!-- Chart fail -->
+        <div>
+          <div class="flex justify-between items-baseline text-sm mb-1.5">
+            <span class="text-white/90">Reel · Chart fail you</span>
+            <span class="font-semibold text-brand">$0.380</span>
+          </div>
+          <div class="h-2.5 rounded-full bg-white/5 overflow-hidden"><div class="bar-grow h-full rounded-full bg-brand" style="width:3%"></div></div>
+          <p class="text-xs text-muted mt-1">花费 $81.27 · 曝光 376,862 · 涨粉 214 人</p>
+        </div>
+
+        <!-- Quick Profits 复投 -->
+        <div>
+          <div class="flex justify-between items-baseline text-sm mb-1.5">
+            <span class="text-white/90 flex items-center gap-2">Reel · Quick Profits <span class="text-[10px] px-1.5 py-0.5 rounded bg-warn/15 text-warn">复投 · 受众疲劳</span></span>
+            <span class="font-semibold text-warn">$0.900</span>
+          </div>
+          <div class="h-2.5 rounded-full bg-white/5 overflow-hidden"><div class="bar-grow h-full rounded-full bg-warn" style="width:7%"></div></div>
+          <p class="text-xs text-muted mt-1">花费 $45.88 · 曝光 292,812 · 涨粉 51 人</p>
+        </div>
+
+        <!-- Post S&P -->
+        <div>
+          <div class="flex justify-between items-baseline text-sm mb-1.5">
+            <span class="text-white/90">Post · S&amp;P 500 Share buyback</span>
+            <span class="font-semibold text-danger">$20.42</span>
+          </div>
+          <div class="h-2.5 rounded-full bg-white/5 overflow-hidden"><div class="bar-grow h-full rounded-full bg-danger" style="width:67%"></div></div>
+          <p class="text-xs text-muted mt-1">花费 $61.25 · 涨粉 3 人</p>
+        </div>
+
+        <!-- Post Nvidia -->
+        <div>
+          <div class="flex justify-between items-baseline text-sm mb-1.5">
+            <span class="text-white/90">Post · Nvidia</span>
+            <span class="font-semibold text-danger">$30.40</span>
+          </div>
+          <div class="h-2.5 rounded-full bg-white/5 overflow-hidden"><div class="bar-grow h-full rounded-full bg-danger" style="width:100%"></div></div>
+          <p class="text-xs text-muted mt-1">花费 $30.40 · 涨粉 1 人</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 复投翻倍可视化 -->
+    <div class="grid md:grid-cols-2 gap-5 mb-8">
+      <div class="card-hover bg-card rounded-2xl border border-brand/20 p-6 glow">
+        <p class="text-xs text-muted mb-2">Quick Profits · 首轮 (7.17–7.27)</p>
+        <p class="text-4xl font-bold text-brand num-tabular">$0.127</p>
+        <p class="text-sm text-muted mt-2">涨粉 1,960 人 · 爆款诞生</p>
+      </div>
+      <div class="card-hover bg-card rounded-2xl border border-warn/20 p-6">
+        <p class="text-xs text-muted mb-2">Quick Profits · 复投 (7.28–7.29)</p>
+        <p class="text-4xl font-bold text-warn num-tabular">$0.900 <span class="text-base text-danger align-middle">↑ 7×</span></p>
+        <p class="text-sm text-muted mt-2">涨粉骤降至 51 人 · 受众池疲劳</p>
+      </div>
+    </div>
+
+    <!-- 解读 -->
+    <div class="space-y-4">
+      <div class="bg-card rounded-2xl border border-white/5 p-6 card-hover">
+        <h4 class="font-semibold mb-2 flex items-center gap-2 text-brand">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          现象拆解 · 爆款为何爆
+        </h4>
+        <p class="text-muted text-sm leading-relaxed">
+          <span class="text-white font-medium">Reel · Quick Profits</span> 成为爆款，源于其直击散户最害人的「快钱幻想 / Scalping」心理，通过揭露「与顶级 AI 竞争」的真相形成强烈的反向营销和信任感，极其成功。
+        </p>
+      </div>
+      <div class="bg-card rounded-2xl border border-white/5 p-6 card-hover">
+        <h4 class="font-semibold mb-2 flex items-center gap-2 text-warn">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M5.07 19h13.86a2 2 0 001.74-2.99L13.73 4a2 2 0 00-3.46 0L3.34 16.01A2 2 0 005.07 19z"/></svg>
+          复投教训 · 必须留冷却期
+        </h4>
+        <p class="text-muted text-sm leading-relaxed">
+          同一爆款 <span class="text-white font-medium">Quick Profits</span> 在连续无间歇复投后（7.28），涨粉成本从 $0.127 暴涨至 $0.900（<span class="text-danger font-medium">翻了 7 倍</span>），说明广告受众池遭遇严重覆盖疲劳，必须给受众池留出冷却期。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 优化建议 ================= -->
+  <section class="mb-10">
+    <div class="flex items-center gap-3 mb-2">
+      <span class="text-brand text-sm font-semibold tracking-widest">03 / 行动方案</span>
+    </div>
+    <h2 class="text-2xl sm:text-3xl font-bold mb-8">可执行的优化建议</h2>
+
+    <div class="grid sm:grid-cols-2 gap-5">
+      <!-- 1 -->
+      <div class="card-hover grad-brand bg-card rounded-2xl border border-white/5 p-6">
+        <div class="flex items-start gap-4">
+          <div class="h-11 w-11 shrink-0 rounded-xl bg-brand/15 flex items-center justify-center text-brand">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-1">01 · 选题方向转型</h4>
+            <p class="text-muted text-sm leading-relaxed">彻底从「看热闹的宏观新闻」转向「解决交易者真痛点」，聚焦择时、心理陷阱、真实收益等直击用户钱包的切身选题。</p>
+          </div>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="card-hover grad-brand bg-card rounded-2xl border border-white/5 p-6">
+        <div class="flex items-start gap-4">
+          <div class="h-11 w-11 shrink-0 rounded-xl bg-brand/15 flex items-center justify-center text-brand">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-1">02 · 投放形式聚焦</h4>
+            <p class="text-muted text-sm leading-relaxed">全面拥抱 Reels 短视频，停止 BOOST 任何 5–7 页的长图文轮播，短视频才是流量与涨粉的核心引擎。</p>
+          </div>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="card-hover grad-brand bg-card rounded-2xl border border-white/5 p-6">
+        <div class="flex items-start gap-4">
+          <div class="h-11 w-11 shrink-0 rounded-xl bg-brand/15 flex items-center justify-center text-brand">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-1">03 · CTA 明确化</h4>
+            <p class="text-muted text-sm leading-relaxed">优化「关注号召（Follow）」，不仅给动作口令，更要强调「关注后能获得的实质结果」（例如：关注获取每日择时建议）。</p>
+          </div>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="card-hover grad-brand bg-card rounded-2xl border border-white/5 p-6">
+        <div class="flex items-start gap-4">
+          <div class="h-11 w-11 shrink-0 rounded-xl bg-brand/15 flex items-center justify-center text-brand">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-1">04 · 复投策略与受众池微调</h4>
+            <p class="text-muted text-sm leading-relaxed">爆款素材第一轮跑完后，必须间隔 2–4 周再进行第二轮复投，为受众池提供「冷却」和新用户补充时间，并适度微调定向受众。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-white/5 pt-8 mt-16 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-muted">
+    <p>© 2026 ZERO Markets · IG BOOST 复盘</p>
+    <p class="num-tabular">数据区间 2026.07.17 – 07.30 · 共 7 次投放</p>
+  </footer>
+
+</div>
+</body>
+</html>
